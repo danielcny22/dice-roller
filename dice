@@ -1,0 +1,17 @@
+import random
+
+def roll_dice():
+    sides = int(input("Enter the number of sides on the dice: "))
+    rolls = int(input("Enter the number of dice to roll: "))
+
+    results = [random.randint(1, sides) for _ in range(rolls)]
+
+    print("\n Dice Roll Results:", results)
+    print(f"Total: {sum(results)}")
+
+while True: 
+    roll_dice()
+    again = input("\nRoll again? (y/n): ").strip().lower()
+    if again != 'y':
+        print("Goodbye")
+        break
